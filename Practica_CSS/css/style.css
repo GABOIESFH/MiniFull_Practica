@@ -1,0 +1,274 @@
+
+/* Estilo para contenedores de encabezado principal, ambos, minifull y botones nav de encabezado */
+.headerPrincipal .container{
+   display:flex;
+   width: 95vw; /* vw= divir los pixeles de la pantalla en porcentaje, en este caso 100%*/
+   padding: 5px;
+   justify-content:space-between;
+   background-color: rgb(255, 255, 255);
+   margin: 10px;
+}
+
+/* Estilo de contenido del encabezado a la izquierda, "Mini Full"*/
+.headerPrincipal-titulo{ 
+font-size: 20px;
+color: black;
+font-weight: 550;
+}
+
+/* Estilo para contenedores nav link individuales*/
+.headerPrincipal-nav-link{
+    font-size: 15px;
+    color: darkgrey;
+    border: 1px solid rgb(9, 9, 9); /*Recordar  que para que funcione el border debe tener
+    un width style color podemos saber el orden posando el mouse sobre la propiedad en este caso border*/
+    padding: 5px; /* recuerda que con Boton derecho -> Inspect -> Computed  se puede ver
+    graficamente  que es margen, border y padding*/
+    border-radius: 5px;
+}
+
+
+.contenidoPrincipal .container{
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    background-color:ghostwhite;
+    
+}
+
+.contenidoPrincipal .subtitulo{
+
+    font-size: 25px;
+    color: black;
+    font-weight: 550;
+}
+
+.contenidoPrincipal-cursos-link{
+
+    width: 20vw;
+   /* height: 10vw;*/
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    border: 1px solid rgb(9, 9, 9); 
+    padding: 5px; /* recuerda que con Boton derecho -> Inspect -> Computed  se puede ver
+    graficamente  que es margen, border y padding*/
+    border-radius: 2px;
+    /* justify-content: space-between; */
+    text-align: center;
+    /* align-items: center; */
+   margin: 1rem;
+   box-shadow: 3px 3px 3px gray;
+
+}
+
+/*Esta clase se crea para definir la sombra que se crea al posar el mouse 
+encima del elemento*/
+.contenidoPrincipal-cursos-link:hover{
+    box-shadow: 5px 5px 5px gray;
+}
+
+.contenidoPrincipal-cursos-link a:before {
+	content: '';
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin: 10px auto;
+}
+
+.contenidoPrincipal-cursos-link:nth-child(even) a:before {
+	background: url(../img/background1.svg) no-repeat;	
+}
+
+.contenidoPrincipal-cursos-link:nth-child(odd) a:before {
+	background: url(../img/background2.svg) no-repeat;
+}
+
+.contenidoPrincipal-cursos {
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    width: 100vw;
+    /* justify-content: center;
+    align-items: center; */
+    margin-left: 5%; /* Margen para que se despeguen der la orilla de la pantalla*/
+}
+
+/* Quitar estilo de hiperlink, es decir, el subrayado en color morado/azul*/
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ /*Responsividad*/
+@media(max-width: 768px){
+
+    .headerPrincipal .container {
+        flex-direction: column;
+        align-items: initial;
+        text-align: center;
+    }
+
+    .headerPrincipal-nav {
+        flex-direction: column;
+    }
+
+    .contenidoPrincipal-cursos{
+        flex-direction: column;
+    }
+
+    .contenidoPrincipal-cursos-link{
+        width: 100%;
+    }
+
+    .rodapePrincipal-navMap-list{
+        height: auto;
+        flex-wrap: nowrap;
+
+    }
+
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+        align-items: center;
+    }
+} */
+
+.videoSobre{
+    display: flex;
+    flex-direction: row;
+}
+
+.videoSobre .container {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    width: 100vw;
+    background-color: rgb(113, 187, 248);
+}
+
+.videoSobre .container .videoSobre-video {
+
+width: 50vw;
+}
+
+.videoSobre .videoSobre-sobre{
+display: flex;
+flex-direction: column;
+justify-content:space-evenly;
+align-items: center;
+font-size:x-large;
+width: 50vw;
+color: white;
+text-align: center;
+
+}
+
+.videoSobre .videoSobre-sobre .videoSobre-sobre-title{
+   font-weight: bold;
+}
+
+
+.videoSobre .videoSobre-sobre .videoSobre-button{
+    background-color: coral;
+    border: none;
+    color: white;
+    padding-block: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-top: 6rem;
+}
+
+.rodapePrincipal{
+    
+    width: 100vw;
+    margin-top: 20px;
+   
+}
+
+.rodapePrincipal-navMap {
+  display: flex;
+    flex-direction: column;
+    width: 100vw;
+    flex-wrap: wrap;
+    background-color: rgb(0, 61, 92);
+   
+    color:white;
+   
+}
+
+.rodapePrincipal-navMap-list{
+    display: flex;
+   flex-direction: column;
+    flex-wrap: wrap;
+height: 200px; 
+    
+}
+
+.rodapePrincipal .subtitulo {
+	color: #FFF;
+}
+
+.navmap-list-title {
+	font-weight: 600;
+	font-size: 25px;
+	margin: 15px 0;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.navmap-list-title-frontend { 
+    color: #149fda; border-left: 4px solid #149fda; 
+}
+.navmap-list-title-backend { 
+    color: #039050; border-left: 4px solid #039050;
+ }
+
+ .navmap-list-title-bancoDeDados { 
+    color: #bb331e; border-left: 4px solid #bb331e; 
+}
+
+.navmap-list-title-framework { 
+    color: #8009b7; border-left: 4px solid #8009b7;
+ }
+
+/*********************************************************/
+
+.rodapePrincipal-patrocinadores .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+.rodapePrincipal-patrocinadores {
+	margin-top: 20px;
+
+}
+
+.rodapePrincipal-contatoForm {
+	margin-top: 20px;
+	text-align:right;
+}
+
+
+
+
+.rodapePrincipal-contatoForm-submit {
+	
+	
+	background-color: #299a12;
+	color: #FFF;
+
+	
+}
+
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    justify-content: space-around;
+    margin-right: 10%;
+  }
+
